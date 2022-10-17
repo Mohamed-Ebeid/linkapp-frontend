@@ -18,20 +18,20 @@ const TrendingLinks = ({ navigation }) => {
 	const [links, setLinks] = useContext(LinkContext);
 	const [loading, setLoading] = useState(false);
 
-	useEffect(() => {
-		setLoading(true);
-		fetchLinks();
-	}, []);
-
-	const fetchLinks = async () => {
-		try {
-			const { data } = await axios.get("/all-links");
-			setLinks(data);
-			setLoading(false);
-		} catch (err) {
-			console.log(err);
-		}
-	};
+	// 	useEffect(() => {
+	// 		setLoading(true);
+	// 		fetchLinks();
+	// 	}, []);
+	//
+	// 	const fetchLinks = async () => {
+	// 		try {
+	// 			const { data } = await axios.get("/all-links");
+	// 			setLinks(data);
+	// 			setLoading(false);
+	// 		} catch (err) {
+	// 			console.log(err);
+	// 		}
+	// 	};
 
 	const handleView = async (link) => {
 		await axios.put(`/view-count/${link._id}`);
@@ -51,7 +51,7 @@ const TrendingLinks = ({ navigation }) => {
 			resizeMode="stretch"
 		>
 			<View style={{ alignItems: "center" }}>
-				<Text style={styles.header}>Top 3 Links:</Text>
+				<Text style={styles.header}>Top 3 loaded Links:</Text>
 			</View>
 			<RenderLinks
 				links={

@@ -10,8 +10,8 @@ import { AuthContext } from "../context/auth";
 
 const Signin = ({ navigation }) => {
 	const [state, setState] = useContext(AuthContext);
-	const [email, setEmail] = useState("solo@notawesome.com");
-	const [password, setPassword] = useState("123456");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 	const [loading, setLoading] = useState(false);
 
 	const handleSubmit = async () => {
