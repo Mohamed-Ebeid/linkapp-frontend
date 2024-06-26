@@ -1,4 +1,7 @@
 {
+  "cli": {
+    "version": ">= 0.52.0"
+  },
   "build": {
     "development": {
       "developmentClient": true,
@@ -9,10 +12,11 @@
     },
     "production": {
       "android": {
-        "image": "latest",
         "buildType": "apk"
       }
     }
+  },
+  "submit": {
+    "production": {}
   }
 }
-
