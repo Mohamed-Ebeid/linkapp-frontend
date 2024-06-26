@@ -9,7 +9,6 @@
     },
     "production": {
       "android": {
-        "package": "com.yourdomain.yourappname",
         "image": "latest",
         "buildType": "apk"
       }
