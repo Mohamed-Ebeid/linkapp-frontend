@@ -21,7 +21,6 @@
       "supportsTablet": true
     },
     "android": {
-            "package": "com.yourdomain.yourappname",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
